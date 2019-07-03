@@ -3,7 +3,7 @@ slideNormalize
 
 **slideNormalize**: normalisation of histological high-resolution images.
 
-We have tested **slideToolKit** on CentOS7 and macOS Mojave+ (version 10.14.5+).
+We have tested **slideNormalize** on CentOS7 and macOS Mojave+ (version 10.14.5+).
 
 Please tell us if you run into problems, it is likely we can help you out - we have done this before. ;)
 
