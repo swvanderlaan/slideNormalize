@@ -26,9 +26,10 @@ if [ -d ~/git/slideNormalize/.git ]; then \
 
 #### Binaries
 
-We have created precompiled binaries for CentOS7+ and macOS Mojave (10.14.5) using `g++` and `opencv2`. These are available in the `binaries` folder:
+For your convenience, we have created precompiled binaries for CentOS7+ and macOS Mojave (10.14.5+) using `g++` and `opencv2`. These are available in the `binaries` folder:
 
-- `slideNormalize_mac`
+- `slideNormalize_macOS_Mojave10145`
+- `slideNormalize_macOS_BigSur1152`
 - `slideNormalize_centos7`
 
 #### Compile from source
@@ -58,5 +59,5 @@ mkdir -pv ~/bin/ && \
 #### Licence
 The MIT License (MIT): <http://opensource.org/licenses/MIT>.
 
-Copyright (c) 2017-2019, [Tim Bezemer](https://github.com/tbezemer) & [Sander W. van der Laan](https://github.com/swvanderlaan), UMC Utrecht, Utrecht, the Netherlands.
+Copyright (c) 2017-2021, [Tim Bezemer](https://github.com/tbezemer) & [Sander W. van der Laan](https://github.com/swvanderlaan), UMC Utrecht, Utrecht, the Netherlands.
 
