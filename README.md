@@ -1,4 +1,4 @@
-slideNormalize
+[slideNormalize](https://github.com/swvanderlaan/slideNormalize)
 ============
 
 **slideNormalize**: normalisation of histological high-resolution images.
