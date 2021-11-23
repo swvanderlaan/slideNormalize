@@ -8,9 +8,9 @@
 #include <string>
 #include <tclap/CmdLine.h>
 
-bool is_file_exist(std::string & fileName) {
-    std::ifstream inname(fileName);
-    return inname.good();
+bool is_file_exist(std::string & filename) {
+    std::ifstream infile(filename);
+    return infile.good();
 }
 
 std::string replaceString(std::string subject, const std::string& search,
