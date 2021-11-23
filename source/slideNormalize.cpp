@@ -9,7 +9,8 @@
 #include <tclap/CmdLine.h>
 
 bool is_file_exist(std::string & filename) {
-    std::ifstream infile(filename);
+    // std::ifstream infile(filename);
+    std::ifstream infile(filename.c_str());
     return infile.good();
 }
 
