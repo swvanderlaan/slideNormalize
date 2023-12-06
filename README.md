@@ -3,7 +3,7 @@
 
 **slideNormalize**: normalisation of histological high-resolution images.
 
-We have tested **slideNormalize** on CentOS7 and macOS Mojave+ (version 10.14.5+).
+We have tested **slideNormalize** on CentOS7+, Rocky8+ and macOS Mojave+ (version 10.14.5+).
 
 Please tell us if you run into problems, it is likely we can help you out - we have done this before. ;)
 
@@ -26,8 +26,9 @@ if [ -d ~/git/slideNormalize/.git ]; then \
 
 #### Binaries
 
-For your convenience, we have created precompiled binaries for CentOS7+ and macOS Mojave (10.14.5+) using `g++` and `opencv2`. These are available in the `binaries` folder:
+For your convenience, we have created precompiled binaries for CentOS7+, Rocky8+ and macOS Mojave (10.14.5+) using `g++` and `opencv2`. These are available in the `binaries` folder:
 
+- `slideNormalize_macOS_Monterey1201`
 - `slideNormalize_macOS_Mojave10145`
 - `slideNormalize_macOS_BigSur1152`
 - `slideNormalize_centos7`
@@ -59,5 +60,5 @@ mkdir -pv ~/bin/ && \
 #### Licence
 The MIT License (MIT): <http://opensource.org/licenses/MIT>.
 
-Copyright (c) 2017-2021, [Tim Bezemer](https://github.com/tbezemer) & [Sander W. van der Laan](https://github.com/swvanderlaan), UMC Utrecht, Utrecht, the Netherlands.
+Copyright (c) 2017-2023, [Tim Bezemer](https://github.com/tbezemer) & [Sander W. van der Laan](https://github.com/swvanderlaan), UMC Utrecht, Utrecht, the Netherlands.
 
