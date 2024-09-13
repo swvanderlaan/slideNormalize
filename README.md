@@ -26,7 +26,7 @@ if [ -d ~/git/slideNormalize/.git ]; then \
 
 #### Binaries
 
-For your convenience, we have created precompiled binaries for CentOS7+ and macOS Mojave (10.14.5+) using `g++` and `opencv2`. These are available in the `binaries` folder:
+For your convenience, we have created precompiled binaries for CentOS7+ and macOS Mojave (10.14.5+) using `g++`, `c++11` and `opencv`. These are available in the `binaries` folder:
 
 - `slideNormalize_macOS_Mojave10145`
 - `slideNormalize_macOS_BigSur1152`
@@ -34,17 +34,39 @@ For your convenience, we have created precompiled binaries for CentOS7+ and macO
 
 #### Compile from source
 
-**slideNormalize** requires [`opencv2`](https://formulae.brew.sh/formula/opencv@2) which you can install via [`brew`](https://brew.sh).
+**slideNormalize** requires [`opencv`](https://formulae.brew.sh/formula/opencv) which you can install via [`brew`](https://brew.sh).
 
 ```
-brew install opencv@2
+brew install opencv
 ```
 
-It will probably be keg-only, so you need to make sure that `opencv2` is in your `$PKG_CONFIG`. Add this to your `.bashrc` or `.bash_profile`
+It will probably be keg-only, so you need to make sure that `opencv` is in your `$PKG_CONFIG`. Add this to your `.bashrc` or `.bash_profile`
 
 ```
-echo 'export PKG_CONFIG_PATH="/usr/local/opt/opencv@2/lib/pkgconfig:$PKG_CONFIG_PATH"' >> ~/.bashrc
+### For OPENCV
+# For slideNormalize -- brew install opencv
+# If you need to have opencv first in your PATH run:
+export PATH="/usr/local/opt/opencv/bin:$PATH"
+
+# For compilers to find opencv you may need to set:
+export LDFLAGS="-L/usr/local/opt/opencv/lib"
+export CPPFLAGS="-I/usr/local/opt/opencv/include"
+
+# For pkg-config to find opencv you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/opencv/lib/pkgconfig"
 ```
+
+Because the compiler expects `opencv.pc` you also need to link `opencv4.pc` to this:
+
+```
+ln -sv /usr/local/opt/opencv/lib/pkgconfig/opencv4.pc /usr/local/opt/opencv/lib/pkgconfig/opencv.pc
+```
+
+Finally, as slideNormalize uses [`tclap`](https://formulae.brew.sh/formula/tclap), you'll need to install this too. 
+
+```
+ brew install tclap
+ ```
 
 #### slideNormalize in your path
 You can add **slideNormalize** to your path by running the code below to make a symbolic link, while making sure to choose the binary appropriate for you system (macOS or CentOS).

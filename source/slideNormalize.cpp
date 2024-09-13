@@ -1,7 +1,7 @@
 // Adapted from: 
 // https://stackoverflow.com/questions/24341114/simple-illumination-correction-in-images-opencv-c/24341809#24341809
 
-#include <opencv2/opencv.hpp>
+#include <opencv4/opencv2/opencv.hpp>
 #include <vector>       // std::vector
 #include <iostream>
 #include <fstream>
